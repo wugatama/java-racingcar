@@ -1,6 +1,7 @@
 package step2;
 
 public class StringCalculator {
+	public static final String SEPARATOR = ",|:";
 	public int calculate(String str) {
 		if (str == null || str.length() == 0) {
 			return 0;
@@ -9,8 +10,7 @@ public class StringCalculator {
 	}
 
 	public String[] split(String input) {
-		String separators = ",|:";
-		return input.split(separators);
+		return input.split(SEPARATOR);
 	}
 
 	public int[] convertToInt(String[] arr) {
